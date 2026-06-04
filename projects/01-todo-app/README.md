@@ -1,13 +1,13 @@
-# Project 1 — Todo App with Offline Sync
+# ⭐ Project 1 — Todo App with Offline Sync
 
-**Difficulty:** Easy | **Duration:** 1 week | **Priority:** 5/5
+**Difficulty:** Easy | **Duration:** 1 week | **Priority:** ⭐⭐⭐⭐⭐
 
-**Status:** Not started  
+**Status:** ⏳ Not started  
 **Live URL:** https://todo-app-prod.railway.app/
 
 ---
 
-## Description
+## 📋 Description
 
 Core PWA fundamentals project. Build a todo list that:
 
@@ -21,7 +21,7 @@ This project establishes the foundation — Service Workers, IndexedDB, Backgrou
 
 ---
 
-## Learning Goals
+## 🎓 Learning Goals
 
 - [ ] Understand Service Worker lifecycle (install → activate → fetch)
 - [ ] Implement Cache-First caching strategy for static assets
@@ -33,7 +33,7 @@ This project establishes the foundation — Service Workers, IndexedDB, Backgrou
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -48,7 +48,7 @@ This project establishes the foundation — Service Workers, IndexedDB, Backgrou
 
 ---
 
-## Setup
+## 🚀 Setup
 
 ```bash
 cd projects/01-todo-app
@@ -68,7 +68,7 @@ npm run dev
 
 ---
 
-## Key Files to Create
+## 📁 Key Files to Create
 
 ```
 01-todo-app/
@@ -96,7 +96,7 @@ npm run dev
 
 ---
 
-## Service Worker Strategy
+## ⚙️ Service Worker Strategy
 
 Use **Cache-First** for static assets (JS, CSS, icons) and **Network-First** for API calls.
 
@@ -123,7 +123,7 @@ Reference: `../../docs/SERVICE_WORKERS.md`
 
 ---
 
-## IndexedDB Schema
+## 🗄️ IndexedDB Schema
 
 ```typescript
 // src/db/todos.ts
@@ -147,7 +147,7 @@ Reference: `../../docs/INDEXEDDB_GUIDE.md`
 
 ---
 
-## Railway Deployment
+## 🚂 Railway Deployment
 
 ### railway.json
 
@@ -186,7 +186,7 @@ https://todo-app-prod.railway.app/
 
 ---
 
-## Completion Checklist
+## ✅ Completion Checklist
 
 See `../../docs/PWA_CHECKLIST.md` for the full checklist.
 
@@ -200,7 +200,7 @@ Key gates before marking this project done:
 
 ---
 
-## References
+## 📚 References
 
 - [Service Workers — MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 - [idb Library](https://github.com/jakearchibald/idb)

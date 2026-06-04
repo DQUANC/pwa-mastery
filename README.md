@@ -1,9 +1,9 @@
-# PWA Learning Path — Progressive Web Apps Mastery
+# 🚀 PWA Learning Path — Progressive Web Apps Mastery
 
 > A structured journey from PWA fundamentals to production-ready full-stack applications with offline capabilities, hardware integration, and real-time sync patterns.
 
 **Author:** Daniel Quan  
-**Status:** In Progress  
+**Status:** 🔄 In Progress  
 **Target:** FullStack Labs — Full Stack Developer Role  
 **Timeline:** 4-8 weeks (depending on pace)  
 **Deployment:** GitHub Pages (portfolio) + Railway (projects)  
@@ -11,7 +11,7 @@
 
 ---
 
-## What Is This?
+## 🎯 Overview
 
 Six progressive PWA projects, each building on the patterns of the previous one. Starting from a basic offline todo list and ending with a real-time collaborative editor using CRDT algorithms. Every project is deployed to production and linked from a GitHub Pages portfolio.
 
@@ -19,43 +19,43 @@ The focus is on the PWA primitives that FullStack Labs specifically requires: Se
 
 ---
 
-## Why PWAs?
+## 🤔 Why PWAs?
 
-- FullStack Labs requires PWA expertise (Service Workers, offline-first, hardware integration)
-- Industry demand is high — major companies are migrating to PWAs
-- Combines web and native app capabilities in a single deployable codebase
-- Scalable from startup MVP to Fortune 500 applications
+- ✅ FullStack Labs requires PWA expertise (Service Workers, offline-first, hardware integration)
+- ✅ Industry demand is high — major companies are migrating to PWAs
+- ✅ Combines web and native app capabilities in a single deployable codebase
+- ✅ Scalable from startup MVP to Fortune 500 applications
 
 ---
 
-## Key Outcomes
+## 🏆 Key Outcomes
 
 By completing this learning path you will:
 
-- Understand Service Workers and caching strategies
-- Build offline-first applications with IndexedDB
-- Integrate device hardware (camera, biometrics, GPS, barcode scanner)
-- Implement real-time synchronization patterns
-- Deploy production-grade PWAs on Railway with backend support
-- Have 6 portfolio projects for job applications
-- Have a professional portfolio on GitHub Pages
+- ✅ Understand Service Workers and caching strategies
+- ✅ Build offline-first applications with IndexedDB
+- ✅ Integrate device hardware (camera, biometrics, GPS, barcode scanner)
+- ✅ Implement real-time synchronization patterns
+- ✅ Deploy production-grade PWAs on Railway with backend support
+- ✅ Have 6 portfolio projects for job applications
+- ✅ Have a professional portfolio on GitHub Pages
 
 ---
 
-## Projects
+## 📁 Projects
 
 | # | Project | Difficulty | Duration | Priority | README |
 |---|---------|-----------|----------|----------|--------|
-| 1 | Todo App with Offline Sync | Easy | 1 week | 5/5 | [details](projects/01-todo-app/README.md) |
-| 2 | Weather App with Geolocation | Easy-Medium | 1 week | 4/5 | [details](projects/02-weather-app/README.md) |
-| 3 | QR Code Scanner | Medium | 2-3 weeks | 5/5 | [details](projects/03-qr-scanner/README.md) |
-| 4 | Task Manager with Biometric Auth | Medium-Advanced | 2-3 weeks | 4/5 | [details](projects/04-task-manager-biometric/README.md) |
-| 5 | Asset Tracker | Advanced | 3-4 weeks | 5/5 | [details](projects/05-asset-tracker/README.md) |
-| 6 | Collaborative Notes | Advanced-Expert | 4 weeks | 4/5 | [details](projects/06-collaborative-notes/README.md) |
+| 1 | Todo App with Offline Sync | Easy | 1 week | ⭐⭐⭐⭐⭐ | [details](projects/01-todo-app/README.md) |
+| 2 | Weather App with Geolocation | Easy-Medium | 1 week | ⭐⭐⭐⭐ | [details](projects/02-weather-app/README.md) |
+| 3 | QR Code Scanner | Medium | 2-3 weeks | ⭐⭐⭐⭐⭐ | [details](projects/03-qr-scanner/README.md) |
+| 4 | Task Manager with Biometric Auth | Medium-Advanced | 2-3 weeks | ⭐⭐⭐⭐ | [details](projects/04-task-manager-biometric/README.md) |
+| 5 | Asset Tracker | Advanced | 3-4 weeks | ⭐⭐⭐⭐⭐ | [details](projects/05-asset-tracker/README.md) |
+| 6 | Collaborative Notes | Advanced-Expert | 4 weeks | ⭐⭐⭐⭐ | [details](projects/06-collaborative-notes/README.md) |
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -75,11 +75,11 @@ By completing this learning path you will:
 
 ---
 
-## Deployment Strategy
+## 🚀 Deployment Strategy
 
 | Platform | Purpose | Cost | URL |
 |----------|---------|------|-----|
-| GitHub Pages | Static portfolio | FREE | https://daniel-quan.github.io/pwa-mastery/ |
+| GitHub Pages | Static portfolio | FREE 🎉 | https://daniel-quan.github.io/pwa-mastery/ |
 | Railway | Full-stack projects + databases | $5/month | see project URLs |
 
 ```
@@ -110,7 +110,7 @@ https://notes-app-prod.railway.app/
 
 ---
 
-## Timeline and Roadmap
+## 📅 Timeline & Roadmap
 
 ### Fast Track (4 Weeks — Apply Immediately)
 
@@ -143,42 +143,42 @@ https://notes-app-prod.railway.app/
 ### Milestones
 
 ```
-Week 2:   1 project complete + GitHub repo live
-Week 4:   2 projects + Portfolio started
-Week 7:   3 projects + Portfolio deployed + Apply
-Week 10:  4 projects + Interview ready
+✅ Week 2:   1 project complete + GitHub repo live
+✅ Week 4:   2 projects + Portfolio started
+✅ Week 7:   3 projects + Portfolio deployed + Apply
+✅ Week 10:  4 projects + Interview ready
 ```
 
 ---
 
-## Success Criteria
+## 🎯 Success Criteria
 
 ### Minimum — Interview Ready (Projects 1-3)
 
-- Complete Projects 1-3
-- 85+ Lighthouse scores on all deployed URLs
-- Portfolio deployed on GitHub Pages
-- Projects deployed on Railway
-- Clean, documented code
-- Professional GitHub repos
+- ✅ Complete Projects 1-3
+- ✅ 85+ Lighthouse scores on all deployed URLs
+- ✅ Portfolio deployed on GitHub Pages
+- ✅ Projects deployed on Railway
+- ✅ Clean, documented code
+- ✅ Professional GitHub repos
 
 ### Recommended — Senior Role (Projects 1-5)
 
-- Complete Projects 1-5
-- Advanced PWA patterns demonstrated
-- Scalable architecture
-- 90+ Lighthouse scores
+- ✅ Complete Projects 1-5
+- ✅ Advanced PWA patterns demonstrated
+- ✅ Scalable architecture
+- ✅ 90+ Lighthouse scores
 
 ### Expert Level (All 6 Projects)
 
-- All 6 projects complete
-- CRDT expertise (Yjs)
-- Real-time systems
-- Full-stack mastery
+- ✅ All 6 projects complete
+- ✅ CRDT expertise (Yjs)
+- ✅ Real-time systems
+- ✅ Full-stack mastery
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 # 1. Clone
@@ -201,7 +201,7 @@ Full setup details: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md)
 
 ---
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 pwa-mastery/
@@ -229,7 +229,7 @@ pwa-mastery/
 
 ---
 
-## Sub-READMEs and Docs
+## 📚 Sub-READMEs & Docs
 
 | File | Contents |
 |------|---------|
@@ -242,7 +242,7 @@ pwa-mastery/
 
 ---
 
-## Cost Breakdown
+## 📊 Cost Breakdown
 
 ```
 GitHub Pages Portfolio:   $0/month
@@ -254,7 +254,7 @@ Total: ~$70/year  (vs $1,440+/year with Vercel)
 
 ---
 
-## Resources
+## 📚 Resources
 
 **PWA Fundamentals**
 - [Web.dev PWA Guide](https://web.dev/progressive-web-apps/)
@@ -274,7 +274,7 @@ Total: ~$70/year  (vs $1,440+/year with Vercel)
 - [Camera API — MDN](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
 - [WebAuthn API — MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebAuthn_API)
 
-**Real-time and Collaboration**
+**Real-time & Collaboration**
 - [Yjs Documentation](https://docs.yjs.dev/)
 - [WebSockets — MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
 - [CRDT.tech](https://crdt.tech/)
@@ -285,7 +285,7 @@ Total: ~$70/year  (vs $1,440+/year with Vercel)
 
 ---
 
-## Progress Tracking
+## 🎓 Progress Tracking
 
 - [ ] Week 1: Todo App complete
 - [ ] Week 2: Weather App complete
@@ -293,7 +293,7 @@ Total: ~$70/year  (vs $1,440+/year with Vercel)
 - [ ] Week 4: Portfolio live
 - [ ] Week 5: Apply to FullStack Labs
 - [ ] Week 6: Interview preparation
-- [ ] Week 7: Offer received
+- [ ] Week 7: Offer received 🎉
 
 ---
 

@@ -1,13 +1,13 @@
-# Project 4 — Task Manager with Biometric Auth
+# 💎 Project 4 — Task Manager with Biometric Auth
 
-**Difficulty:** Medium-Advanced | **Duration:** 2-3 weeks | **Priority:** 4/5
+**Difficulty:** Medium-Advanced | **Duration:** 2-3 weeks | **Priority:** ⭐⭐⭐⭐
 
-**Status:** Not started  
+**Status:** ⏳ Not started  
 **Live URL:** https://tasks-app-prod.railway.app/
 
 ---
 
-## Description
+## 📋 Description
 
 A security-focused task manager that demonstrates:
 
@@ -21,7 +21,7 @@ This project is the most security-intensive of the six. It bridges the gap betwe
 
 ---
 
-## Learning Goals
+## 🎓 Learning Goals
 
 - [ ] Implement WebAuthn registration and authentication flows
 - [ ] Understand the difference between passkey (platform authenticator) and security key (roaming authenticator)
@@ -33,7 +33,7 @@ This project is the most security-intensive of the six. It bridges the gap betwe
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -52,7 +52,7 @@ This project is the most security-intensive of the six. It bridges the gap betwe
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 04-task-manager-biometric/
@@ -93,7 +93,7 @@ This project is the most security-intensive of the six. It bridges the gap betwe
 
 ---
 
-## Setup
+## 🚀 Setup
 
 ### Frontend
 
@@ -116,7 +116,7 @@ npm install -D typescript @types/express @types/node @types/jsonwebtoken ts-node
 
 ---
 
-## WebAuthn Flow
+## 🔐 WebAuthn Flow
 
 ### Registration (creating a passkey)
 
@@ -151,7 +151,7 @@ Reference: [SimpleWebAuthn Docs](https://simplewebauthn.dev/)
 
 ---
 
-## Encrypted IndexedDB
+## 🔒 Encrypted IndexedDB
 
 ```typescript
 // src/db/encryption.ts
@@ -172,7 +172,7 @@ All task objects are encrypted before writing to IndexedDB and decrypted on read
 
 ---
 
-## Role-Based Access Control
+## 👥 Role-Based Access Control
 
 Three roles:
 
@@ -201,7 +201,7 @@ router.delete('/tasks/:id', authenticate, authorize('admin', 'manager'), deleteT
 
 ---
 
-## Railway Deployment
+## 🚂 Railway Deployment
 
 ### Frontend railway.json
 
@@ -250,7 +250,7 @@ https://tasks-app-prod.railway.app/
 
 ---
 
-## Completion Checklist
+## ✅ Completion Checklist
 
 - [ ] WebAuthn registration flow works on Chrome (desktop + Android)
 - [ ] WebAuthn authentication flow works and issues JWT
@@ -263,7 +263,7 @@ https://tasks-app-prod.railway.app/
 
 ---
 
-## References
+## 📚 References
 
 - [WebAuthn API — MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebAuthn_API)
 - [SimpleWebAuthn](https://simplewebauthn.dev/)

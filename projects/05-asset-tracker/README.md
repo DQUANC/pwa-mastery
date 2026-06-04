@@ -1,13 +1,13 @@
-# Project 5 — Asset Tracker
+# 🎯 Project 5 — Asset Tracker
 
-**Difficulty:** Advanced | **Duration:** 3-4 weeks | **Priority:** 5/5
+**Difficulty:** Advanced | **Duration:** 3-4 weeks | **Priority:** ⭐⭐⭐⭐⭐
 
-**Status:** Not started  
+**Status:** ⏳ Not started  
 **Live URL:** https://assets-app-prod.railway.app/
 
 ---
 
-## Description
+## 📋 Description
 
 A production-grade full-stack asset tracking application that combines every hardware API covered so far:
 
@@ -22,7 +22,7 @@ This is the capstone project for "interview ready" status. It demonstrates the a
 
 ---
 
-## Learning Goals
+## 🎓 Learning Goals
 
 - [ ] Integrate multiple hardware APIs (GPS, Camera, Biometric) in a single app
 - [ ] Build a scalable offline-first architecture with complex data models
@@ -34,7 +34,7 @@ This is the capstone project for "interview ready" status. It demonstrates the a
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -54,7 +54,7 @@ This is the capstone project for "interview ready" status. It demonstrates the a
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 05-asset-tracker/
@@ -110,7 +110,7 @@ This is the capstone project for "interview ready" status. It demonstrates the a
 
 ---
 
-## Setup
+## 🚀 Setup
 
 ### Frontend
 
@@ -133,7 +133,7 @@ npm install -D typescript @types/express @types/node @types/multer ts-node nodem
 
 ---
 
-## Data Models
+## 🗄️ Data Models
 
 ### Asset
 
@@ -180,7 +180,7 @@ const LocationSchema = new mongoose.Schema({
 
 ---
 
-## GPS Tracking
+## 📍 GPS Tracking
 
 ```typescript
 // frontend/src/gps/useGPS.ts
@@ -203,7 +203,7 @@ export function useGPS() {
 
 ---
 
-## Admin Dashboard
+## 📊 Admin Dashboard
 
 The dashboard (`frontend/src/pages/Dashboard.tsx`) shows:
 
@@ -215,7 +215,7 @@ The dashboard (`frontend/src/pages/Dashboard.tsx`) shows:
 
 ---
 
-## Railway Deployment
+## 🚂 Railway Deployment
 
 ### Frontend Environment Variables
 
@@ -246,7 +246,7 @@ Backend:  https://assets-api.railway.app/
 
 ---
 
-## Completion Checklist
+## ✅ Completion Checklist
 
 - [ ] GPS captures current location when adding an asset
 - [ ] Camera captures photo and uploads to backend
@@ -260,7 +260,7 @@ Backend:  https://assets-api.railway.app/
 
 ---
 
-## References
+## 📚 References
 
 - [Geolocation API — MDN](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 - [Camera API — MDN](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)

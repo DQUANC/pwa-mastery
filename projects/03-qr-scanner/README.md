@@ -1,15 +1,15 @@
-# Project 3 — QR Code Scanner
+# 🏆 Project 3 — QR Code Scanner
 
-**Difficulty:** Medium | **Duration:** 2-3 weeks | **Priority:** 5/5
+**Difficulty:** Medium | **Duration:** 2-3 weeks | **Priority:** ⭐⭐⭐⭐⭐
 
-**Status:** Not started  
+**Status:** ⏳ Not started  
 **Live URL:** https://qr-scanner-prod.railway.app/
 
-> **MOST IMPORTANT PROJECT FOR FULLSTACK ROLE.** This is the first full-stack project — React frontend + Node.js backend + MongoDB. It also introduces direct hardware integration via the Camera API.
+> **🎯 MOST IMPORTANT PROJECT FOR FULLSTACK ROLE.** This is the first full-stack project — React frontend + Node.js backend + MongoDB. It also introduces direct hardware integration via the Camera API.
 
 ---
 
-## Description
+## 📋 Description
 
 A production-quality QR code and barcode scanner that:
 
@@ -23,7 +23,7 @@ This project is the most directly relevant to real-world fullstack work — it d
 
 ---
 
-## Learning Goals
+## 🎓 Learning Goals
 
 - [ ] Integrate the Camera API (`navigator.mediaDevices.getUserMedia`)
 - [ ] Implement real-time QR/barcode decoding using the `jsQR` library
@@ -35,7 +35,7 @@ This project is the most directly relevant to real-world fullstack work — it d
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -54,7 +54,7 @@ This project is the most directly relevant to real-world fullstack work — it d
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 03-qr-scanner/
@@ -94,7 +94,7 @@ This project is the most directly relevant to real-world fullstack work — it d
 
 ---
 
-## Setup
+## 🚀 Setup
 
 ### Frontend
 
@@ -117,7 +117,7 @@ npm run dev
 
 ---
 
-## Camera API Integration
+## 📷 Camera API Integration
 
 ```typescript
 // frontend/src/camera/useCamera.ts
@@ -149,7 +149,7 @@ export function useCamera(videoRef: React.RefObject<HTMLVideoElement>) {
 }
 ```
 
-## QR Decoding with jsQR
+## 🔍 QR Decoding with jsQR
 
 ```typescript
 // frontend/src/scanner/useQRScanner.ts
@@ -190,7 +190,7 @@ export function useQRScanner(
 
 ---
 
-## Backend API
+## 🔌 Backend API
 
 ### Endpoints
 
@@ -202,7 +202,7 @@ GET  /api/scans/:id     — Get a single scan
 DELETE /api/scans/:id   — Delete a scan
 ```
 
-### MongoDB Schema
+### 🗄️ MongoDB Schema
 
 ```typescript
 // backend/src/models/Scan.ts
@@ -222,7 +222,7 @@ export const Scan = mongoose.model('Scan', ScanSchema);
 
 ---
 
-## Railway Deployment
+## 🚂 Railway Deployment
 
 Deploy as two separate Railway services.
 
@@ -276,7 +276,7 @@ Backend:  https://qr-scanner-api.railway.app/
 
 ---
 
-## Completion Checklist
+## ✅ Completion Checklist
 
 - [ ] Camera stream starts and rear camera is used on mobile
 - [ ] QR codes decode in real time from the live video
@@ -290,7 +290,7 @@ Backend:  https://qr-scanner-api.railway.app/
 
 ---
 
-## References
+## 📚 References
 
 - [Camera API (getUserMedia) — MDN](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
 - [jsQR Library](https://github.com/cozmo/jsQR)

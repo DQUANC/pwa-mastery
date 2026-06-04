@@ -1,13 +1,13 @@
-# Project 2 — Weather App with Geolocation
+# 🌤️ Project 2 — Weather App with Geolocation
 
-**Difficulty:** Easy-Medium | **Duration:** 1 week | **Priority:** 4/5
+**Difficulty:** Easy-Medium | **Duration:** 1 week | **Priority:** ⭐⭐⭐⭐
 
-**Status:** Not started  
+**Status:** ⏳ Not started  
 **Live URL:** https://weather-app-prod.railway.app/
 
 ---
 
-## Description
+## 📋 Description
 
 Real-time weather data with offline caching. This project introduces:
 
@@ -20,7 +20,7 @@ The trade-off between "always fresh" (Network-First) and "always fast" (Cache-Fi
 
 ---
 
-## Learning Goals
+## 🎓 Learning Goals
 
 - [ ] Understand Network-First vs Cache-First trade-offs
 - [ ] Implement the Geolocation API with proper permission handling
@@ -31,7 +31,7 @@ The trade-off between "always fresh" (Network-First) and "always fast" (Cache-Fi
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -47,7 +47,7 @@ The trade-off between "always fresh" (Network-First) and "always fast" (Cache-Fi
 
 ---
 
-## Setup
+## 🚀 Setup
 
 ```bash
 cd projects/02-weather-app
@@ -71,7 +71,7 @@ You will need a free OpenWeather API key:
 
 ---
 
-## Key Files to Create
+## 📁 Key Files to Create
 
 ```
 02-weather-app/
@@ -98,7 +98,7 @@ You will need a free OpenWeather API key:
 
 ---
 
-## Service Worker Strategy
+## ⚙️ Service Worker Strategy
 
 Use **Network-First** for weather API calls so data is always fresh when online:
 
@@ -138,7 +138,7 @@ Reference: `../../docs/SERVICE_WORKERS.md`
 
 ---
 
-## Geolocation API
+## 📍 Geolocation API
 
 ```typescript
 // src/hooks/useGeolocation.ts
@@ -164,7 +164,7 @@ export function useGeolocation() {
 
 ---
 
-## OpenWeather API Integration
+## 🌦️ OpenWeather API Integration
 
 ```typescript
 // src/api/weather.ts
@@ -183,7 +183,7 @@ export async function fetchWeatherByCoords(
 
 ---
 
-## Railway Deployment
+## 🚂 Railway Deployment
 
 ### railway.json
 
@@ -216,7 +216,7 @@ https://weather-app-prod.railway.app/
 
 ---
 
-## Completion Checklist
+## ✅ Completion Checklist
 
 - [ ] Lighthouse PWA score 85+ on Railway URL
 - [ ] Weather loads from geolocation on first visit
@@ -227,7 +227,7 @@ https://weather-app-prod.railway.app/
 
 ---
 
-## References
+## 📚 References
 
 - [Geolocation API — MDN](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 - [OpenWeather API Docs](https://openweathermap.org/api)

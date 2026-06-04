@@ -1,13 +1,13 @@
-# Project 6 — Collaborative Notes
+# 🔥 Project 6 — Collaborative Notes
 
-**Difficulty:** Advanced-Expert | **Duration:** 4 weeks | **Priority:** 4/5
+**Difficulty:** Advanced-Expert | **Duration:** 4 weeks | **Priority:** ⭐⭐⭐⭐
 
-**Status:** Not started  
+**Status:** ⏳ Not started  
 **Live URL:** https://notes-app-prod.railway.app/
 
 ---
 
-## Description
+## 📋 Description
 
 A real-time collaborative note editor where multiple users can:
 
@@ -22,7 +22,7 @@ This is the most technically complex project in the learning path. Completing it
 
 ---
 
-## Learning Goals
+## 🎓 Learning Goals
 
 - [ ] Understand CRDT algorithms and why they solve the offline collaboration problem
 - [ ] Implement real-time collaboration using Yjs
@@ -34,7 +34,7 @@ This is the most technically complex project in the learning path. Completing it
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -54,7 +54,7 @@ This is the most technically complex project in the learning path. Completing it
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 06-collaborative-notes/
@@ -99,7 +99,7 @@ This is the most technically complex project in the learning path. Completing it
 
 ---
 
-## Setup
+## 🚀 Setup
 
 ### Frontend
 
@@ -122,7 +122,7 @@ npm install -D typescript @types/express @types/node @types/ws ts-node nodemon
 
 ---
 
-## How Yjs Works
+## 🧠 How Yjs Works
 
 Yjs is a CRDT implementation. A `Y.Doc` is a shared data structure that:
 
@@ -164,7 +164,7 @@ When the WebSocket disconnects (offline or server down):
 
 ---
 
-## WebSocket Server (y-websocket)
+## 🔌 WebSocket Server (y-websocket)
 
 ```typescript
 // backend/src/yjsServer.ts
@@ -185,7 +185,7 @@ export function startYjsServer(server: import('http').Server) {
 
 ---
 
-## Presence (Awareness API)
+## 👥 Presence (Awareness API)
 
 Show other users' names and cursor positions in real time:
 
@@ -213,19 +213,19 @@ export function usePresence(wsProvider: WebsocketProvider, currentUser: User) {
 
 ---
 
-## Conflict Resolution — Key Concept
+## ⚖️ Conflict Resolution — Key Concept
 
 | Approach | How conflicts are resolved | Offline support |
 |----------|--------------------------|-----------------|
 | Last Write Wins | Latest timestamp wins — data lost | Poor |
 | Operational Transform (OT) | Server mediates — complex | Limited |
-| CRDT (Yjs) | Math guarantees no conflicts | Excellent |
+| CRDT (Yjs) | Math guarantees no conflicts | Excellent ✅ |
 
 CRDTs guarantee that all clients converge to the same state regardless of the order in which they received updates. This is why Yjs can merge offline edits made by 10 different users without a server in the loop.
 
 ---
 
-## Railway Deployment
+## 🚂 Railway Deployment
 
 The backend runs both Express (HTTP) and a WebSocket server on the same port.
 
@@ -267,7 +267,7 @@ Backend:  https://notes-api.railway.app/
 
 ---
 
-## Completion Checklist
+## ✅ Completion Checklist
 
 - [ ] Two browser tabs can edit the same note simultaneously and stay in sync
 - [ ] Edits made offline are merged correctly on reconnect (no data loss)
@@ -280,7 +280,7 @@ Backend:  https://notes-api.railway.app/
 
 ---
 
-## References
+## 📚 References
 
 - [Yjs Documentation](https://docs.yjs.dev/)
 - [y-websocket](https://github.com/yjs/y-websocket)

@@ -1,4 +1,4 @@
-# Portfolio — GitHub Pages
+# 🌐 Portfolio — GitHub Pages
 
 This folder contains the static portfolio website deployed to GitHub Pages.  
 It serves as the public-facing showcase for all 6 PWA projects.
@@ -7,16 +7,16 @@ It serves as the public-facing showcase for all 6 PWA projects.
 
 ---
 
-## Purpose
+## 🎯 Purpose
 
-- Central landing page linking to all deployed Railway projects
-- About and contact pages for job applications
-- Demonstrates HTML/CSS/JS fundamentals alongside PWA work
-- Deployed automatically via GitHub Actions on every push to `main`
+- ✅ Central landing page linking to all deployed Railway projects
+- ✅ About and contact pages for job applications
+- ✅ Demonstrates HTML/CSS/JS fundamentals alongside PWA work
+- ✅ Deployed automatically via GitHub Actions on every push to `main`
 
 ---
 
-## Folder Structure
+## 📁 Folder Structure
 
 ```
 portfolio/
@@ -37,7 +37,7 @@ portfolio/
 
 ---
 
-## HTML Files to Create
+## 📄 HTML Files to Create
 
 | File | Purpose |
 |------|---------|
@@ -48,7 +48,7 @@ portfolio/
 
 ---
 
-## GitHub Pages Deployment
+## 🚀 GitHub Pages Deployment
 
 ### Automatic (via GitHub Actions)
 
@@ -75,11 +75,11 @@ https://daniel-quan.github.io/pwa-mastery/
 - Go to repository **Actions** tab
 - Find the latest "Deploy Portfolio to GitHub Pages" run
 - Click it to see logs
-- If green, visit the live URL
+- If green ✅, visit the live URL
 
 ---
 
-## Linking to Railway Projects
+## 🔗 Linking to Railway Projects
 
 In `projects.html`, link each project card to its Railway URL:
 
@@ -106,7 +106,7 @@ In `projects.html`, link each project card to its Railway URL:
 
 ---
 
-## Optional: Custom Domain ($10/year)
+## 🌍 Optional: Custom Domain ($10/year)
 
 If you purchase a domain (e.g., `daniel-quan-pwa.com`):
 
@@ -127,7 +127,7 @@ If you purchase a domain (e.g., `daniel-quan-pwa.com`):
 
 ---
 
-## References
+## 📚 References
 
 - [GitHub Pages Docs](https://docs.github.com/en/pages)
 - [GitHub Actions: deploy-pages](https://github.com/actions/deploy-pages)
