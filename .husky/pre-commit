@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# Pre-commit validation
+# - Run tests (skipped if no test script configured)
+# - Run linter (skipped if no src/ directory)
+# - Type check (skipped if no tsconfig.json)
+# - Check for secrets
+
+set -e
+
+echo "Pre-commit validation starting..."
+
+# 1. Run tests (only if a test script is defined in package.json)
+if node -e "const p=require('./package.json'); if(!p.scripts||!p.scripts.test) process.exit(1);" 2>/dev/null; then
+  echo "  Running tests..."
+  npm test -- --bail --silent 2>/dev/null || {
+    echo "  Tests failed"
+    exit 1
+  }
+  echo "  Tests passed"
+else
+  echo "  Skipping tests (no test script configured)"
+fi
+
+# 2. Run linter (only if src/ directory exists)
+if [ -d "src" ]; then
+  echo "  Running linter..."
+  npx eslint --ext .ts,.tsx,.js,.jsx src/ 2>/dev/null || {
+    echo "  Linter errors found"
+    exit 1
+  }
+  echo "  Linter passed"
+else
+  echo "  Skipping linter (no src/ directory)"
+fi
+
+# 3. Type check (only if tsconfig.json exists)
+if [ -f "tsconfig.json" ]; then
+  echo "  Type checking..."
+  npx tsc --noEmit 2>/dev/null || {
+    echo "  Type errors found"
+    exit 1
+  }
+  echo "  Type check passed"
+else
+  echo "  Skipping type check (no tsconfig.json)"
+fi
+
+# 4. Check for secrets
+# Match only lines where a key is assigned an actual value (not a placeholder like <your-key>,
+# not a variable reference like process.env.TOKEN, and not a comment or documentation line).
+# Pattern: KEY=value where value is 8+ non-whitespace, non-angle-bracket characters.
+echo "  Checking for secrets..."
+if git diff --cached | grep -E "^\+" | grep -v "^\+\+" | grep -v "process\.env\." | grep -v "<[^>]*>" | grep -qE "(GITHUB_TOKEN|API_KEY|JWT_SECRET|PASSWORD)\s*=\s*[^<\s]{8,}"; then
+  echo "  Potential secrets detected"
+  exit 1
+fi
+echo "  No secrets found"
+
+echo "Pre-commit validation passed"
+exit 0

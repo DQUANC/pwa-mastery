@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "auto-commit": "node scripts/auto-commit.js",
+    "auto-pr": "node scripts/auto-pr.js",
+    "auto-jira": "node scripts/auto-jira.js",
+    "dashboard": "node scripts/dashboard.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "minimist": "^1.2.8"
+  }
+}
