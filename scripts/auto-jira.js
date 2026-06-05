@@ -99,15 +99,31 @@ function makeJiraRequest(method, path, data = null) {
 }
 
 async function createIssue(issueData) {
-  const path = '/issues';
+  const path = '/issue';
+
+  const descriptionText = issueData.description || '';
+  const descriptionAdf = {
+    type: 'doc',
+    version: 1,
+    content: [
+      {
+        type: 'paragraph',
+        content: [{ type: 'text', text: descriptionText }]
+      }
+    ]
+  };
+
+  const priorityValue = typeof issueData.priority === 'string'
+    ? { name: issueData.priority }
+    : (issueData.priority || { name: 'Medium' });
 
   const body = {
     fields: {
       project: { key: config.jiraProjectKey },
       summary: issueData.summary,
-      description: issueData.description || '',
+      description: descriptionAdf,
       issuetype: { name: issueData.type },
-      priority: issueData.priority || { name: 'Medium' },
+      priority: priorityValue,
       labels: issueData.labels || [],
       assignee: issueData.assignee ? { name: issueData.assignee } : undefined,
       parent: issueData.parent ? { key: issueData.parent } : undefined
@@ -135,7 +151,7 @@ async function transitionIssue(issueKey, status) {
 
   try {
     // Get available transitions
-    const path = `/issues/${issueKey}/transitions`;
+    const path = `/issue/${issueKey}/transitions`;
     const result = await makeJiraRequest('GET', path);
 
     const transition = result.data.transitions.find(
@@ -156,11 +172,13 @@ async function transitionIssue(issueKey, status) {
 }
 
 async function addComment(issueKey, comment) {
-  const path = `/issues/${issueKey}/comments`;
+  const path = `/issue/${issueKey}/comment`;
 
   try {
     await makeJiraRequest('POST', path, {
       body: {
+        type: 'doc',
+        version: 1,
         content: [
           {
             type: 'paragraph',
@@ -204,13 +222,34 @@ function parseStoriesFromArgs(storiesArg) {
 
   // Handle both formats:
   // "API,UI,Tests" or "API Endpoint:5,UI Component:3"
-  return storiesArg.split(',').map(story => {
-    const parts = story.trim().split(':');
-    return {
-      title: parts[0].trim(),
-      points: parts[1] ? parseInt(parts[1]) : config.storyPoints
-    };
-  });
+  // Also handles story titles that contain commas (e.g. "Title (a, b, c):5,Next Story:3")
+  // Strategy: split on commas that are immediately followed by a non-space, non-comma
+  // sequence ending in ":<digits>" — i.e. story entry boundaries.
+  // Use regex to match each "title:points" token, allowing commas inside titles.
+  const tokens = [];
+  // Match: any characters (non-greedy), optionally followed by :digits, as a story boundary
+  // Split approach: find all ":digits," or ":digits$" as end-of-story markers
+  const storyPattern = /(.+?):(\d+)(?:,|$)/g;
+  let match;
+  while ((match = storyPattern.exec(storiesArg)) !== null) {
+    tokens.push({
+      title: match[1].trim(),
+      points: parseInt(match[2])
+    });
+  }
+
+  // Fallback: if no :digits pattern found, split on commas
+  if (tokens.length === 0) {
+    return storiesArg.split(',').map(story => {
+      const parts = story.trim().split(':');
+      return {
+        title: parts[0].trim(),
+        points: parts[1] ? parseInt(parts[1]) : config.storyPoints
+      };
+    });
+  }
+
+  return tokens;
 }
 
 function getDefaultStories() {
@@ -314,7 +353,7 @@ Examples:
 
     try {
       const storyKey = await createIssue({
-        type: 'Story',
+        type: 'Historia',
         summary: story.title,
         description: `Story for: ${epicName}`,
         parent: epicKey,
@@ -336,7 +375,7 @@ Examples:
   log('\n=== LINKING ISSUES ===', 'info');
 
   for (const storyKey of storyKeys) {
-    await linkIssues(epicKey, storyKey, 'relates to');
+    await linkIssues(epicKey, storyKey, 'Relates');
   }
 
   // ========================================================================

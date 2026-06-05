@@ -79,23 +79,9 @@ By completing this learning path you will:
 
 | Platform | Purpose | Cost | URL |
 |----------|---------|------|-----|
-| GitHub Pages | Static portfolio | FREE 🎉 | https://daniel-quan.github.io/pwa-mastery/ |
 | Railway | Full-stack projects + databases | $5/month | see project URLs |
 
-```
-You push to main
-        |
-GitHub Actions triggers
-        |
-   _____|_____
-  |           |
-Portfolio   Projects
-(HTML/CSS)  (React + backends)
-  |           |
-GitHub      Railway
-Pages       (~2-5 min)
-(~1 min)
-```
+Projects deploy automatically via GitHub Actions when changes are pushed to `main`.
 
 **Project URLs:**
 
@@ -192,8 +178,7 @@ npm install idb tailwindcss axios
 npm run dev
 
 # 3. When ready to deploy, push to main
-# GitHub Actions auto-deploys portfolio to GitHub Pages
-# and projects to Railway
+# GitHub Actions auto-deploys projects to Railway
 git push origin main
 ```
 
@@ -205,7 +190,6 @@ Full setup details: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md)
 
 ```
 pwa-mastery/
-├── portfolio/              — GitHub Pages static portfolio
 ├── projects/
 │   ├── 01-todo-app/
 │   ├── 02-weather-app/
@@ -233,7 +217,6 @@ pwa-mastery/
 
 | File | Contents |
 |------|---------|
-| [portfolio/README.md](portfolio/README.md) | GitHub Pages setup, folder structure, deployment |
 | [projects/README.md](projects/README.md) | All 6 projects overview with links |
 | [docs/SERVICE_WORKERS.md](docs/SERVICE_WORKERS.md) | SW lifecycle, Cache-First, Network-First, Background Sync |
 | [docs/INDEXEDDB_GUIDE.md](docs/INDEXEDDB_GUIDE.md) | IndexedDB with idb, offline-first patterns |

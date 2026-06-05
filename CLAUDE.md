@@ -10,7 +10,6 @@ PWA Mastery is a progressive learning path with 6 projects targeting a FullStack
 
 ```
 pwa-mastery/
-├── portfolio/          Static GitHub Pages site (HTML/CSS/JS only — no framework)
 ├── projects/
 │   ├── 01-todo-app/    React + TypeScript, Service Worker, IndexedDB
 │   ├── 02-weather-app/ React + TypeScript, Geolocation, Network-First SW
@@ -125,13 +124,6 @@ Full per-project checklist: `docs/PWA_CHECKLIST.md`
 ---
 
 ## Deployment
-
-### GitHub Pages (`portfolio/`)
-
-- Deploys on push to `main` when `portfolio/**` files change
-- Workflow: `.github/workflows/deploy-pages.yml`
-- No build step — static HTML/CSS/JS served directly
-- URL: `https://daniel-quan.github.io/pwa-mastery/`
 
 ### Railway (`projects/`)
 
