@@ -4,7 +4,10 @@
     "auto-pr": "node scripts/auto-pr.js",
     "auto-jira": "node scripts/auto-jira.js",
     "dashboard": "node scripts/dashboard.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "node scripts/run-all.js test",
+    "lint": "node scripts/run-all.js lint",
+    "type-check": "node scripts/run-all.js typecheck"
   },
   "devDependencies": {
     "husky": "^9.1.7",
