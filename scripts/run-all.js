@@ -73,6 +73,21 @@ for (const folder of projectFolders) {
   console.log(`\n--- Running "${scriptName}" in projects/${folder} ---`);
   anyRan = true;
 
+  // Install sub-project dependencies before running the script.
+  // Use `npm ci` when a lockfile is present (reproducible CI installs),
+  // otherwise fall back to `npm install`.
+  const hasLockfile = fs.existsSync(path.join(projectPath, 'package-lock.json'));
+  const installCmd = hasLockfile ? 'npm ci' : 'npm install';
+
+  try {
+    console.log(`  [${folder}] Installing dependencies (${installCmd})...`);
+    execSync(installCmd, { cwd: projectPath, stdio: 'inherit' });
+  } catch {
+    console.error(`  [${folder}] Dependency install FAILED — skipping "${scriptName}".`);
+    anyFailed = true;
+    continue;
+  }
+
   try {
     execSync(`npm run ${scriptName}`, {
       cwd: projectPath,
