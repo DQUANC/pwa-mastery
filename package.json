@@ -12,5 +12,6 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "minimist": "^1.2.8"
-  }
+  },
+  "version": "0.1.0"
 }
