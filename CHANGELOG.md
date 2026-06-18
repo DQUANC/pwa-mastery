@@ -1,3 +1,8 @@
+## [0.2.0] - 2026-06-18
+
+- feat(02-weather-app): scaffold full PWA with offline-first architecture
+- feat(02-weather-app): scaffold full PWA project with offline-first architecture
+
 # Changelog
 
 ## [0.1.0] - 2026-06-09
