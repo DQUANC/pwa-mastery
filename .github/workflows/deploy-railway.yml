@@ -1,0 +1,74 @@
+name: Deploy Projects to Railway
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/**'
+
+jobs:
+  deploy-todo:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'projects/01-todo-app')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railway/deploy-action@alpha
+        with:
+          workingDirectory: projects/01-todo-app
+          token: ${{ secrets.RAILWAY_TOKEN }}
+          service: todo-app
+
+  deploy-weather:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'projects/02-weather-app')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railway/deploy-action@alpha
+        with:
+          workingDirectory: projects/02-weather-app
+          token: ${{ secrets.RAILWAY_TOKEN }}
+          service: weather-app
+
+  deploy-qr-scanner:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'projects/03-qr-scanner')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railway/deploy-action@alpha
+        with:
+          workingDirectory: projects/03-qr-scanner
+          token: ${{ secrets.RAILWAY_TOKEN }}
+          service: qr-scanner
+
+  deploy-task-manager:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'projects/04-task-manager-biometric')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railway/deploy-action@alpha
+        with:
+          workingDirectory: projects/04-task-manager-biometric
+          token: ${{ secrets.RAILWAY_TOKEN }}
+          service: task-manager
+
+  deploy-asset-tracker:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'projects/05-asset-tracker')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railway/deploy-action@alpha
+        with:
+          workingDirectory: projects/05-asset-tracker
+          token: ${{ secrets.RAILWAY_TOKEN }}
+          service: asset-tracker
+
+  deploy-collaborative-notes:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'projects/06-collaborative-notes')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railway/deploy-action@alpha
+        with:
+          workingDirectory: projects/06-collaborative-notes
+          token: ${{ secrets.RAILWAY_TOKEN }}
+          service: collaborative-notes

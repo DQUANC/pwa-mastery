@@ -1,26 +1,17 @@
 {
-  "name": "pwa-mastery-home",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "auto-commit": "node scripts/auto-commit.js",
+    "auto-pr": "node scripts/auto-pr.js",
+    "auto-jira": "node scripts/auto-jira.js",
+    "dashboard": "node scripts/dashboard.js",
+    "prepare": "husky install",
+    "test": "node scripts/run-all.js test",
+    "lint": "node scripts/run-all.js lint",
+    "type-check": "node scripts/run-all.js typecheck"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.20",
     "husky": "^9.1.7",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.5"
-  }
+    "minimist": "^1.2.8"
+  },
+  "version": "0.2.0"
 }
