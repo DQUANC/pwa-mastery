@@ -1,3 +1,10 @@
+## [0.3.0] - 2026-06-25
+
+- Merge pull request #4 from dquancruz/feat/02-weather-app
+- merge(main): resolve conflicts and restructure for Railway deployment
+- feat(01-todo-app): add Railway deployment config and serve static dist
+- feat: add homepage catalog and harden railway.json for 02-weather-app
+
 ## [0.2.0] - 2026-06-18
 
 - feat(02-weather-app): scaffold full PWA with offline-first architecture
